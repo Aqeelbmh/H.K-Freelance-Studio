@@ -540,11 +540,22 @@ input:focus, textarea:focus {
     padding: 0.5rem;
     transition: var(--transition);
     margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .theme-toggle:hover {
     color: var(--primary-color);
+    background-color: rgba(74, 144, 226, 0.1);
     transform: rotate(15deg);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
 }
 
 .hamburger {
@@ -664,6 +675,7 @@ input:focus, textarea:focus {
 .dark-mode .nav-links a:hover,
 .dark-mode .nav-links a.active {
     color: var(--primary-color);
+    background-color: rgba(74, 144, 226, 0.1);
 }
 
 .dark-mode .hamburger span {
@@ -737,6 +749,8 @@ input:focus, textarea:focus {
 .about {
     padding: var(--section-padding) 0;
     background-color: var(--bg-color);
+    position: relative;
+    overflow: hidden;
 }
 
 .about-content {
@@ -745,6 +759,14 @@ input:focus, textarea:focus {
     align-items: center;
     gap: 40px;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
 }
 
 .about-image {
@@ -753,6 +775,9 @@ input:focus, textarea:focus {
     max-width: 300px;
     height: auto;
     margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 .about-image::before {
@@ -763,16 +788,14 @@ input:focus, textarea:focus {
     right: 0;
     bottom: 0;
     background: var(--primary-color);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    z-index: 1;
     opacity: 0.1;
+    z-index: 1;
 }
 
 .about-image img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     position: relative;
     z-index: 2;
     transition: transform 0.3s ease;
@@ -782,17 +805,18 @@ input:focus, textarea:focus {
     transform: scale(1.05);
 }
 
-.about-image::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: var(--primary-color);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    z-index: 0;
-    opacity: 0.2;
+.about-text h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    opacity: 0.9;
 }
 
 .skills {
@@ -803,11 +827,17 @@ input:focus, textarea:focus {
 }
 
 .skills span {
-    padding: 5px 15px;
+    padding: 8px 15px;
     background-color: var(--primary-color);
     color: white;
     border-radius: 20px;
     font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.skills span:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
 }
 
 /* Services Section */
@@ -1654,14 +1684,12 @@ input:focus, textarea:focus {
         max-width: 250px;
     }
     
-    .contact-form {
-        padding: 20px;
+    .about-text h2 {
+        font-size: 2rem;
     }
     
-    .form-group input,
-    .form-group textarea {
-        padding: 10px 12px;
-        font-size: 0.9rem;
+    .about-text p {
+        font-size: 1rem;
     }
 }
 
@@ -1674,14 +1702,8 @@ input:focus, textarea:focus {
         max-width: 280px;
     }
     
-    .contact-form {
-        padding: 25px;
-    }
-    
-    .form-group input,
-    .form-group textarea {
-        padding: 12px 15px;
-        font-size: 1rem;
+    .about-text h2 {
+        font-size: 2.2rem;
     }
 }
 
@@ -1698,17 +1720,8 @@ input:focus, textarea:focus {
         margin: 0;
     }
     
-    .contact-content {
-        flex-direction: row;
-    }
-    
-    .contact-form {
-        width: 60%;
-        padding: 30px;
-    }
-    
-    .contact-info {
-        width: 40%;
+    .about-text {
+        flex: 1;
     }
 }
 
@@ -1721,7 +1734,33 @@ input:focus, textarea:focus {
         max-width: 350px;
     }
     
-    .contact-form {
-        padding: 40px;
+    .about-text h2 {
+        font-size: 2.5rem;
     }
+    
+    .about-text p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Dark Mode About Section */
+.dark-mode .about {
+    background-color: var(--bg-color);
+}
+
+.dark-mode .about-text h2 {
+    color: var(--primary-color);
+}
+
+.dark-mode .about-text p {
+    color: var(--text-color);
+}
+
+.dark-mode .skills span {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+.dark-mode .skills span:hover {
+    box-shadow: 0 0 20px var(--glow-hover);
 } 
