@@ -546,16 +546,34 @@ input:focus, textarea:focus {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    position: relative;
+    overflow: hidden;
 }
 
-.theme-toggle:hover {
-    color: var(--primary-color);
-    background-color: rgba(74, 144, 226, 0.1);
-    transform: rotate(15deg);
+.theme-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 0;
+}
+
+.theme-toggle:hover::before {
+    opacity: 0.1;
 }
 
 .theme-toggle:active {
     transform: scale(0.95);
+}
+
+.theme-toggle i {
+    position: relative;
+    z-index: 1;
 }
 
 .hamburger {
@@ -593,7 +611,7 @@ input:focus, textarea:focus {
     }
     
     .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg);
+        transform: rotate(45deg) translate(5px, 5px);
     }
     
     .hamburger.active span:nth-child(2) {
@@ -601,7 +619,7 @@ input:focus, textarea:focus {
     }
     
     .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg);
+        transform: rotate(-45deg) translate(5px, -5px);
     }
     
     .nav-links {
