@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.K Freelance Studio</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="light-mode">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="images/my logo.png" alt="H.K Freelance Studio Logo" class="nav-logo">
+            <span>H.K Freelance Studio</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="animated-text">Welcome to H.K Freelance Studio</h1>
+            <p>We create beautiful and functional websites that help businesses grow</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 data-aos="fade-up">About Us</h2>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="images/my poto.png" alt="H.K Freelance Studio Team">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <p>H.K Freelance Studio is a team of passionate web developers and designers dedicated to creating modern and responsive websites. With years of experience in the industry, we help businesses establish their online presence through beautiful and functional web solutions.</p>
+                    <div class="skills">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>UI/UX</span>
+                        <span>SEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 data-aos="fade-up">Our Services</h2>
+            <div class="services-scroll-container">
+                <div class="services-grid">
+                    <div class="services-row">
+                        <div class="service-card" data-aos="zoom-in">
+                            <i class="fas fa-globe"></i>
+                            <h3>Web & App Development</h3>
+                            <p>From responsive websites to custom web applications and mobile apps, we deliver modern digital solutions for your business needs.</p>
+                        </div>
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>Graphic & UI/UX Design</h3>
+                            <p>Professional design services including logos, brand identity, business cards, and UI/UX design for websites and applications.</p>
+                        </div>
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h3>Content Writing & Translation</h3>
+                            <p>High-quality content creation and translation services to help you communicate effectively with your audience.</p>
+                        </div>
+                    </div>
+                    <div class="services-row">
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Digital Marketing & SEO</h3>
+                            <p>Comprehensive digital marketing strategies and SEO optimization to increase your online visibility and reach.</p>
+                        </div>
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                            <i class="fas fa-video"></i>
+                            <h3>Media & Video Services</h3>
+                            <p>Professional video editing, intro/outro creation, and voice-over services to enhance your multimedia content.</p>
+                        </div>
+                        <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
+                            <i class="fas fa-database"></i>
+                            <h3>Data & Analytics</h3>
+                            <p>Data analysis, dashboard creation, and database setup services to help you make data-driven decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 data-aos="fade-up">Our Work</h2>
+            <div class="portfolio-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+                <button class="filter-btn" data-filter="blog">Blog</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="portfolio" data-aos="fade-up">
+                    <img src="images/portfolio 1.png" alt="Portfolio Website 1">
+                    <div class="portfolio-overlay">
+                        <h3>Portfolio Website 1</h3>
+                        <p>Web Development</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="portfolio" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/portfolio 2.png" alt="Portfolio Website 2">
+                    <div class="portfolio-overlay">
+                        <h3>Portfolio Website 2</h3>
+                        <p>Web Development</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="portfolio" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/portfolio 3.png" alt="Portfolio Website 3">
+                    <div class="portfolio-overlay">
+                        <h3>Portfolio Website 3</h3>
+                        <p>Web Development</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="blog" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/blog.png" alt="Blog Page 1">
+                    <div class="portfolio-overlay">
+                        <h3>Blog Page 1</h3>
+                        <p>Content & Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container pricing-container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Pricing</h2>
+                <p>Transparent pricing for all your digital needs</p>
+                <div class="pricing-note">
+                    <i class="fas fa-info-circle"></i>
+                    <p>All prices are negotiable based on project requirements and scope. Contact us for a customized quote.</p>
+                </div>
+            </div>
+            <div class="pricing-grid">
+                <!-- Creative & Visual Services -->
+                <div class="pricing-category" data-aos="fade-up">
+                    <div class="category-header">
+                        <i class="fas fa-palette"></i>
+                        <h3>Creative & Visual Services</h3>
+                    </div>
+                    <div class="pricing-cards">
+                        <div class="pricing-card" data-aos="zoom-in">
+                            <div class="card-header">
+                                <h4>Web Portfolio</h4>
+                                <div class="price-tag">
+                                    <span class="currency">$</span>
+                                    <span class="amount">150</span>
+                                </div>
+                            </div>
+                            <p class="card-description">Showcase your work online</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Responsive Design</li>
+                                <li><i class="fas fa-check"></i> Custom Layout</li>
+                                <li><i class="fas fa-check"></i> SEO Optimized</li>
+                            </ul>
+                            <a href="#contact" class="pricing-button">Get Started</a>
+                        </div>
+
+                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-header">
+                                <h4>Graphic Designing</h4>
+                                <div class="price-tag">
+                                    <span class="currency">$</span>
+                                    <span class="amount">100</span>
+                                </div>
+                            </div>
+                            <p class="card-description">Creative graphic design solutions</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Logo Design</li>
+                                <li><i class="fas fa-check"></i> Branding</li>
+                                <li><i class="fas fa-check"></i> Print Materials</li>
+                            </ul>
+                            <a href="#contact" class="pricing-button">Get Started</a>
+                        </div>
+
+                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-header">
+                                <h4>Presentation Design</h4>
+                                <div class="price-tag">
+                                    <span class="currency">$</span>
+                                    <span class="amount">120</span>
+                                </div>
+                            </div>
+                            <p class="card-description">Professional presentation design</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Custom Templates</li>
+                                <li><i class="fas fa-check"></i> Visual Storytelling</li>
+                                <li><i class="fas fa-check"></i> Slide Animation</li>
+                            </ul>
+                            <a href="#contact" class="pricing-button">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Writing & Language Services -->
+                <div class="pricing-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <i class="fas fa-pen-nib"></i>
+                        <h3>Writing & Language Services</h3>
+                    </div>
+                    <div class="pricing-cards">
+                        <div class="pricing-card" data-aos="zoom-in">
+                            <div class="card-header">
+                                <h4>Content Writing</h4>
+                                <div class="price-tag">
+                                    <span class="currency">$</span>
+                                    <span class="amount">30</span>
+                                </div>
+                            </div>
+                            <p class="card-description">Engaging and SEO-friendly content</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> SEO Optimized</li>
+                                <li><i class="fas fa-check"></i> Research Included</li>
+                                <li><i class="fas fa-check"></i> 2 Revisions</li>
+                            </ul>
+                            <a href="#contact" class="pricing-button">Get Started</a>
+                        </div>
+
+                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-header">
+                                <h4>Copywriting</h4>
+                                <div class="price-tag">
+                                    <span class="currency">$</span>
+                                    <span class="amount">40</span>
+                                </div>
+                            </div>
+                            <p class="card-description">Persuasive and compelling copy</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Sales Focused</li>
+                                <li><i class="fas fa-check"></i> Brand Voice</li>
+                                <li><i class="fas fa-check"></i> Multiple Formats</li>
+                            </ul>
+                            <a href="#contact" class="pricing-button">Get Started</a>
+                        </div>
+
+                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-header">
+                                <h4>Translation & Writing</h4>
+                                <div class="price-tag">
+                                    <span class="currency">$</span>
+                                    <span class="amount">35</span>
+                                </div>
+                            </div>
+                            <p class="card-description">Accurate and culturally relevant</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Multiple Languages</li>
+                                <li><i class="fas fa-check"></i> Proofreading</li>
+                                <li><i class="fas fa-check"></i> Localization</li>
+                            </ul>
+                            <a href="#contact" class="pricing-button">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data & Analytical Services -->
+                <div class="pricing-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Data & Analytical Services</h3>
+                    </div>
+                    <div class="pricing-cards">
+                        <div class="pricing-card" data-aos="zoom-in">
+                            <div class="card-header">
+                                <h4>Data Services</h4>
+                                <div class="price-tag">
+                                    <span class="currency">$</span>
+                                    <span class="amount">60</span>
+                                </div>
+                            </div>
+                            <p class="card-description">Comprehensive data solutions</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Data Collection</li>
+                                <li><i class="fas fa-check"></i> Data Cleaning</li>
+                                <li><i class="fas fa-check"></i> Data Management</li>
+                            </ul>
+                            <a href="#contact" class="pricing-button">Get Started</a>
+                        </div>
+
+                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="card-header">
+                                <h4>Data Analysis</h4>
+                                <div class="price-tag">
+                                    <span class="currency">$</span>
+                                    <span class="amount">80</span>
+                                </div>
+                            </div>
+                            <p class="card-description">Insightful data analysis</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Statistical Analysis</li>
+                                <li><i class="fas fa-check"></i> Reporting</li>
+                                <li><i class="fas fa-check"></i> Visualization</li>
+                            </ul>
+                            <a href="#contact" class="pricing-button">Get Started</a>
+                        </div>
+
+                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-header">
+                                <h4>Data Entry</h4>
+                                <div class="price-tag">
+                                    <span class="currency">$</span>
+                                    <span class="amount">40</span>
+                                </div>
+                            </div>
+                            <p class="card-description">Accurate and efficient data entry</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Fast Typing</li>
+                                <li><i class="fas fa-check"></i> Data Validation</li>
+                                <li><i class="fas fa-check"></i> Confidentiality</li>
+                            </ul>
+                            <a href="#contact" class="pricing-button">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Support Services -->
+                <div class="pricing-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Business Support Services</h3>
+                    </div>
+                    <div class="pricing-cards">
+                        <div class="pricing-card" data-aos="zoom-in">
+                            <div class="card-header">
+                                <h4>Virtual Assistance</h4>
+                                <div class="price-tag">
+                                    <span class="currency">$</span>
+                                    <span class="amount">50</span>
+                                </div>
+                            </div>
+                            <p class="card-description">Professional virtual assistance</p>
+                            <ul class="features">
+                                <li><i class="fas fa-check"></i> Email Management</li>
+                                <li><i class="fas fa-check"></i> Scheduling</li>
+                                <li><i class="fas fa-check"></i> Administrative Support</li>
+                            </ul>
+                            <a href="#contact" class="pricing-button">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 data-aos="fade-up">Client Testimonials</h2>
+            <div class="testimonials-slider" data-aos="fade-up">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Amazing work! The website exceeded our expectations and helped us grow our business significantly."</p>
+                    <div class="client-info">
+                        <h4>John Doe</h4>
+                        <p>CEO, Tech Company</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Professional, responsive, and delivered exactly what we needed. Highly recommended!"</p>
+                    <div class="client-info">
+                        <h4>Jane Smith</h4>
+                        <p>Marketing Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-aos="fade-up">Get in Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form" action="https://formspree.io/f/mnnpydbl" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                <div class="contact-info" data-aos="fade-left">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>bmhaqeel995@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+62 82113699451</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/my logo.png" alt="H.K Freelance Studio Logo" class="footer-logo">
+                    <h3>H.K Freelance Studio</h3>
+                    <p>Creating beautiful and functional digital solutions for your business needs.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Web & App Development</a></li>
+                            <li><a href="#services">Graphic & UI/UX Design</a></li>
+                            <li><a href="#services">Content Writing & Translation</a></li>
+                            <li><a href="#services">Digital Marketing & SEO</a></li>
+                            <li><a href="#services">Media & Video Services</a></li>
+                            <li><a href="#services">Data & Analytics</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact Us</h4>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-envelope"></i> bmhaqeel995@gmail.com</li>
+                            <li><i class="fas fa-phone"></i> +62 82113699451</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 H.K Freelance Studio. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
