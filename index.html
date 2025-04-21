@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="H.K Freelance Studio - Professional web development, design, and digital solutions">
+    <meta name="keywords" content="web development, UI/UX design, digital solutions, freelance services">
+    <meta name="author" content="H.K Freelance Studio">
+    <meta name="theme-color" content="#4a90e2">
+    <meta property="og:title" content="H.K Freelance Studio">
+    <meta property="og:description" content="Creative, reliable, and affordable digital solutions for your business">
+    <meta property="og:image" content="images/my logo.png">
+    <meta property="og:url" content="https://hkfreelancestudio.com">
     <title>H.K Freelance Studio</title>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Icons -->
@@ -13,7 +24,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <!-- AOS Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <!-- Custom Script -->
+    <script src="script.js" defer></script>
 </head>
 <body class="light-mode">
     <!-- Navbar -->
@@ -41,12 +54,18 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <h1 class="animated-text">Welcome to H.K Freelance Studio</h1>
-            <p>We create beautiful and functional websites that help businesses grow</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="welcome-text">Welcome to</span>
+                    <span class="studio-name">H.K Freelance Studio</span>
+                </h1>
+                <p class="hero-subtitle">Creative, reliable, and affordable digital solutions for your business.</p>
+                <p class="hero-tagline">Freelancing made simple. Quality work, delivered fast.</p>
+                <a href="#contact" class="cta-button">Let's Work Together</a>
+            </div>
         </div>
     </section>
 
@@ -59,14 +78,29 @@
                     <img src="images/my poto.png" alt="H.K Freelance Studio Team">
                 </div>
                 <div class="about-text" data-aos="fade-left">
-                    <p>H.K Freelance Studio is a team of passionate web developers and designers dedicated to creating modern and responsive websites. With years of experience in the industry, we help businesses establish their online presence through beautiful and functional web solutions.</p>
+                    <p>Welcome to H.K Freelance Studio – where creativity meets functionality!
+
+                        We are a passionate team of freelance professionals dedicated to crafting stunning, modern, and responsive websites tailored to meet your business goals. Whether you're a startup, small business, or personal brand, we bring your vision to life with clean design, powerful development, and smart digital solutions.
+                        
+                        At H.K Freelance Studio, we believe in quality, communication, and creativity. From web development and UI/UX design to portfolio sites, pricing pages, and contact forms – every project we take on is built with care, precision, and attention to detail.
+                        
+                        With a focus on user experience and the latest tech, we aim to help you stand out online and connect with your audience in meaningful ways.
+                        
+                        Let's build something amazing together!</p>
                     <div class="skills">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
                         <span>React</span>
                         <span>UI/UX</span>
-                        <span>SEO</span>
+                        <span>Formspree</span>
+                        <span>Netlify</span>
+                        <span>Figma</span>
+                        <span>Canva</span>
+                        <span>Github</span>
+                        <span>Portfolio</span>
+                        <span>Firebase</span>
+                        
                     </div>
                 </div>
             </div>
@@ -99,8 +133,8 @@
                     <div class="services-row">
                         <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
                             <i class="fas fa-chart-line"></i>
-                            <h3>Digital Marketing & SEO</h3>
-                            <p>Comprehensive digital marketing strategies and SEO optimization to increase your online visibility and reach.</p>
+                            <h3>Business Support Services</h3>
+                            <p>Efficient and reliable support to help manage your daily business tasks—so you can focus on growth.</p>
                         </div>
                         <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
                             <i class="fas fa-video"></i>
@@ -129,32 +163,56 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="portfolio" data-aos="fade-up">
-                    <img src="images/portfolio 1.png" alt="Portfolio Website 1">
-                    <div class="portfolio-overlay">
-                        <h3>Portfolio Website 1</h3>
-                        <p>Web Development</p>
-                    </div>
+                    <a href="https://aqeelbmh.netlify.app/" target="_blank" class="portfolio-link">
+                        <img src="images/portfolio 1.png" alt="Portfolio Website 1">
+                        <div class="portfolio-overlay">
+                            <h3>Portfolio Website 1</h3>
+                            <p>Web Development</p>
+                            <div class="portfolio-actions">
+                                <span class="view-project">View Project</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="portfolio-item" data-category="portfolio" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/portfolio 2.png" alt="Portfolio Website 2">
-                    <div class="portfolio-overlay">
-                        <h3>Portfolio Website 2</h3>
-                        <p>Web Development</p>
-                    </div>
+                    <a href="https://aqeelbmh.github.io/Client_oumar/" target="_blank" class="portfolio-link">
+                        <img src="images/portfolio 2.png" alt="Portfolio Website 2">
+                        <div class="portfolio-overlay">
+                            <h3>Portfolio Website 2</h3>
+                            <p>Web Development</p>
+                            <div class="portfolio-actions">
+                                <span class="view-project">View Project</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="portfolio-item" data-category="portfolio" data-aos="fade-up" data-aos-delay="200">
-                    <img src="images/portfolio 3.png" alt="Portfolio Website 3">
-                    <div class="portfolio-overlay">
-                        <h3>Portfolio Website 3</h3>
-                        <p>Web Development</p>
-                    </div>
+                    <a href="https://aqeelbmh.github.io/Oumar_Portfolio_Update/" target="_blank" class="portfolio-link">
+                        <img src="images/portfolio 3.png" alt="Portfolio Website 3">
+                        <div class="portfolio-overlay">
+                            <h3>Portfolio Website 3</h3>
+                            <p>Web Development</p>
+                            <div class="portfolio-actions">
+                                <span class="view-project">View Project</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="portfolio-item" data-category="blog" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/blog.png" alt="Blog Page 1">
-                    <div class="portfolio-overlay">
-                        <h3>Blog Page 1</h3>
-                        <p>Content & Design</p>
-                    </div>
+                    <a href="https://hkmotorskandy.netlify.app/" target="_blank" class="portfolio-link">
+                        <img src="images/blog.png" alt="Blog Page 1">
+                        <div class="portfolio-overlay">
+                            <h3>Blog Page 1</h3>
+                            <p>Content & Design</p>
+                            <div class="portfolio-actions">
+                                <span class="view-project">View Project</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -168,7 +226,7 @@
                 <p>Transparent pricing for all your digital needs</p>
                 <div class="pricing-note">
                     <i class="fas fa-info-circle"></i>
-                    <p>All prices are negotiable based on project requirements and scope. Contact us for a customized quote.</p>
+                    <p>Prices are flexible based on project complexity and requirements. Contact us for a customized quote.</p>
                 </div>
             </div>
             <div class="pricing-grid">
@@ -184,14 +242,15 @@
                                 <h4>Web Portfolio</h4>
                                 <div class="price-tag">
                                     <span class="currency">$</span>
-                                    <span class="amount">150</span>
+                                    <span class="amount">80</span>
+                                    <span class="price-range">- $100</span>
                                 </div>
                             </div>
-                            <p class="card-description">Showcase your work online</p>
+                            <p class="card-description">Simple personal site to showcase work</p>
                             <ul class="features">
                                 <li><i class="fas fa-check"></i> Responsive Design</li>
                                 <li><i class="fas fa-check"></i> Custom Layout</li>
-                                <li><i class="fas fa-check"></i> SEO Optimized</li>
+                                <li><i class="fas fa-check"></i> Basic SEO</li>
                             </ul>
                             <a href="#contact" class="pricing-button">Get Started</a>
                         </div>
@@ -201,10 +260,11 @@
                                 <h4>Graphic Designing</h4>
                                 <div class="price-tag">
                                     <span class="currency">$</span>
-                                    <span class="amount">100</span>
+                                    <span class="amount">50</span>
+                                    <span class="price-range">- $80</span>
                                 </div>
                             </div>
-                            <p class="card-description">Creative graphic design solutions</p>
+                            <p class="card-description">Logos, branding, posters, etc.</p>
                             <ul class="features">
                                 <li><i class="fas fa-check"></i> Logo Design</li>
                                 <li><i class="fas fa-check"></i> Branding</li>
@@ -218,10 +278,11 @@
                                 <h4>Presentation Design</h4>
                                 <div class="price-tag">
                                     <span class="currency">$</span>
-                                    <span class="amount">120</span>
+                                    <span class="amount">60</span>
+                                    <span class="price-range">- $90</span>
                                 </div>
                             </div>
-                            <p class="card-description">Professional presentation design</p>
+                            <p class="card-description">Beautiful slides with animation</p>
                             <ul class="features">
                                 <li><i class="fas fa-check"></i> Custom Templates</li>
                                 <li><i class="fas fa-check"></i> Visual Storytelling</li>
@@ -244,10 +305,11 @@
                                 <h4>Content Writing</h4>
                                 <div class="price-tag">
                                     <span class="currency">$</span>
-                                    <span class="amount">30</span>
+                                    <span class="amount">15</span>
+                                    <span class="price-range">- $30 per piece</span>
                                 </div>
                             </div>
-                            <p class="card-description">Engaging and SEO-friendly content</p>
+                            <p class="card-description">Blog posts, website content, etc.</p>
                             <ul class="features">
                                 <li><i class="fas fa-check"></i> SEO Optimized</li>
                                 <li><i class="fas fa-check"></i> Research Included</li>
@@ -261,10 +323,11 @@
                                 <h4>Copywriting</h4>
                                 <div class="price-tag">
                                     <span class="currency">$</span>
-                                    <span class="amount">40</span>
+                                    <span class="amount">20</span>
+                                    <span class="price-range">- $40 per page</span>
                                 </div>
                             </div>
-                            <p class="card-description">Persuasive and compelling copy</p>
+                            <p class="card-description">Ads, product descriptions, CTAs</p>
                             <ul class="features">
                                 <li><i class="fas fa-check"></i> Sales Focused</li>
                                 <li><i class="fas fa-check"></i> Brand Voice</li>
@@ -278,10 +341,11 @@
                                 <h4>Translation & Writing</h4>
                                 <div class="price-tag">
                                     <span class="currency">$</span>
-                                    <span class="amount">35</span>
+                                    <span class="amount">15</span>
+                                    <span class="price-range">- $25 per 500 words</span>
                                 </div>
                             </div>
-                            <p class="card-description">Accurate and culturally relevant</p>
+                            <p class="card-description">Basic translation and proofreading</p>
                             <ul class="features">
                                 <li><i class="fas fa-check"></i> Multiple Languages</li>
                                 <li><i class="fas fa-check"></i> Proofreading</li>
@@ -292,11 +356,11 @@
                     </div>
                 </div>
 
-                <!-- Data & Analytical Services -->
+                <!-- Data & Analytics Services -->
                 <div class="pricing-category" data-aos="fade-up" data-aos-delay="200">
                     <div class="category-header">
                         <i class="fas fa-chart-bar"></i>
-                        <h3>Data & Analytical Services</h3>
+                        <h3>Data & Analytics Services</h3>
                     </div>
                     <div class="pricing-cards">
                         <div class="pricing-card" data-aos="zoom-in">
@@ -304,10 +368,11 @@
                                 <h4>Data Services</h4>
                                 <div class="price-tag">
                                     <span class="currency">$</span>
-                                    <span class="amount">60</span>
+                                    <span class="amount">30</span>
+                                    <span class="price-range">- $50 per project</span>
                                 </div>
                             </div>
-                            <p class="card-description">Comprehensive data solutions</p>
+                            <p class="card-description">Collection, cleaning, management</p>
                             <ul class="features">
                                 <li><i class="fas fa-check"></i> Data Collection</li>
                                 <li><i class="fas fa-check"></i> Data Cleaning</li>
@@ -321,10 +386,11 @@
                                 <h4>Data Analysis</h4>
                                 <div class="price-tag">
                                     <span class="currency">$</span>
-                                    <span class="amount">80</span>
+                                    <span class="amount">40</span>
+                                    <span class="price-range">- $60 per project</span>
                                 </div>
                             </div>
-                            <p class="card-description">Insightful data analysis</p>
+                            <p class="card-description">Charts, trends, insights</p>
                             <ul class="features">
                                 <li><i class="fas fa-check"></i> Statistical Analysis</li>
                                 <li><i class="fas fa-check"></i> Reporting</li>
@@ -338,10 +404,11 @@
                                 <h4>Data Entry</h4>
                                 <div class="price-tag">
                                     <span class="currency">$</span>
-                                    <span class="amount">40</span>
+                                    <span class="amount">15</span>
+                                    <span class="price-range">- $25 per hour</span>
                                 </div>
                             </div>
-                            <p class="card-description">Accurate and efficient data entry</p>
+                            <p class="card-description">Typing, document filling</p>
                             <ul class="features">
                                 <li><i class="fas fa-check"></i> Fast Typing</li>
                                 <li><i class="fas fa-check"></i> Data Validation</li>
@@ -364,10 +431,11 @@
                                 <h4>Virtual Assistance</h4>
                                 <div class="price-tag">
                                     <span class="currency">$</span>
-                                    <span class="amount">50</span>
+                                    <span class="amount">25</span>
+                                    <span class="price-range">- $40 per week</span>
                                 </div>
                             </div>
-                            <p class="card-description">Professional virtual assistance</p>
+                            <p class="card-description">Emails, admin tasks, scheduling</p>
                             <ul class="features">
                                 <li><i class="fas fa-check"></i> Email Management</li>
                                 <li><i class="fas fa-check"></i> Scheduling</li>
@@ -396,8 +464,8 @@
                     </div>
                     <p>"Amazing work! The website exceeded our expectations and helped us grow our business significantly."</p>
                     <div class="client-info">
-                        <h4>John Doe</h4>
-                        <p>CEO, Tech Company</p>
+                        <h4>Oumar Bagayoko</h4>
+                        <p>CEO, Apply for Campus</p>
                     </div>
                 </div>
                 <div class="testimonial-card">
@@ -410,8 +478,22 @@
                     </div>
                     <p>"Professional, responsive, and delivered exactly what we needed. Highly recommended!"</p>
                     <div class="client-info">
-                        <h4>Jane Smith</h4>
-                        <p>Marketing Director</p>
+                        <h4>Mohamed Ashraff</h4>
+                        <p>CEO, H.K Motors</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Excellent service! The team was very professional and delivered a fantastic website that exceeded our expectations."</p>
+                    <div class="client-info">
+                        <h4>Jason Lee</h4>
+                        <p>Freelancer</p>
                     </div>
                 </div>
             </div>
@@ -514,9 +596,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
 </body>
 </html> 
