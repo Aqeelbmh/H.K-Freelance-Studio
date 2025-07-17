@@ -21,6 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScrollReveal();
     initializePricingSection();
     initializeServicesScroll();
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    function handleNavbarScroll() {
+        if (!navbar) return;
+        if (window.scrollY > 10) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+    }
+    window.addEventListener('scroll', handleNavbarScroll);
+    handleNavbarScroll(); // Initial check
 });
 
 // Theme Toggle
@@ -103,13 +116,19 @@ function initializeMobileMenu() {
 function initializeSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            const href = this.getAttribute('href');
+            if (href && href.length > 1 && href.startsWith('#')) {
+                const id = href.slice(1);
+                const target = document.getElementById(id);
+                // Debug log to check if the click is captured and which anchor is clicked
+                console.log('Smooth scroll triggered for:', href, 'Target found:', !!target);
+                if (target) {
+                    e.preventDefault();
+                    // Offset for fixed navbar
+                    const yOffset = document.querySelector('.navbar')?.offsetHeight || 0;
+                    const y = target.getBoundingClientRect().top + window.pageYOffset - yOffset - 10;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
             }
         });
     });
@@ -290,4 +309,19 @@ function initializeServicesScroll() {
     servicesScrollContainer.addEventListener('scroll', updateArrowVisibility);
     window.addEventListener('resize', updateArrowVisibility);
     updateArrowVisibility();
+}
+
+// Back to Top Button
+const backToTopBtn = document.getElementById('back-to-top');
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 }

@@ -9,13 +9,13 @@
     <meta name="theme-color" content="#4a90e2">
     <meta property="og:title" content="H.K Freelance Studio">
     <meta property="og:description" content="Creative, reliable, and affordable digital solutions for your business">
-    <meta property="og:image" content="images/my logo.png">
+    <meta property="og:image" content="images/logo.png">
     <meta property="og:url" content="https://hkfreelancestudio.com">
     <title>H.K Freelance Studio</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/my logo.png">
-    <link rel="apple-touch-icon" href="images/my logo.png">
-    <link rel="shortcut icon" href="images/my logo.png">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="shortcut icon" href="images/logo.png">
     <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
@@ -33,14 +33,14 @@
     <script src="script.js" defer></script>
 </head>
 <body class="light-mode">
-    <!-- Navbar -->
-    <nav class="navbar">
+    <header>
+        <nav class="navbar" aria-label="Main Navigation">
         <div class="nav-brand">
-            <img src="images/my logo.png" alt="H.K Freelance Studio Logo" class="nav-logo">
+                <img src="images/logo.png" alt="H.K Freelance Studio Logo" class="nav-logo">
             <span>H.K Freelance Studio</span>
         </div>
-        <div class="nav-links">
-            <a href="#home" class="active">Home</a>
+            <div class="nav-links" role="navigation" aria-label="Primary">
+            <a href="#home" class="active" aria-current="page">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
@@ -48,18 +48,20 @@
             <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact</a>
         </div>
-        <button id="theme-toggle" class="theme-toggle">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
             <i class="fas fa-moon"></i>
         </button>
-        <div class="hamburger">
+            <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+            </button>
     </nav>
-
+    </header>
+    <div class="animated-bg" aria-hidden="true"></div>
+    <main>
     <!-- Hero Section -->
-    <section class="hero">
+        <section class="hero" id="hero-vanta" aria-label="Hero">
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
@@ -72,14 +74,14 @@
             </div>
         </div>
     </section>
-
+        <hr class="section-divider" aria-hidden="true">
     <!-- About Section -->
-    <section id="about" class="about">
+        <section id="about" class="about" aria-label="About Us">
         <div class="container">
             <h2 data-aos="fade-up">About Us</h2>
             <div class="about-content">
                 <div class="about-image" data-aos="fade-right">
-                    <img src="images/my poto.png" alt="H.K Freelance Studio Team">
+                        <img src="images/my poto.png" alt="Team photo of H.K Freelance Studio">
                 </div>
                 <div class="about-text" data-aos="fade-left">
                     <p>Welcome to H.K Freelance Studio – where creativity meets functionality!
@@ -91,7 +93,7 @@
                         With a focus on user experience and the latest tech, we aim to help you stand out online and connect with your audience in meaningful ways.
                         
                         Let's build something amazing together!</p>
-                    <div class="skills">
+                        <div class="skills" aria-label="Skills">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
@@ -104,367 +106,382 @@
                         <span>Github</span>
                         <span>Portfolio</span>
                         <span>Firebase</span>
-                        
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>
     </section>
-
+        <hr class="section-divider" aria-hidden="true">
     <!-- Services Section -->
-    <section id="services" class="services">
+        <section id="services" class="services" aria-label="Our Services">
         <div class="container">
             <h2 data-aos="fade-up">Our Services</h2>
-            <div class="services-scroll-container">
-                <div class="services-grid">
-                    <div class="services-row">
-                        <div class="service-card" data-aos="zoom-in">
-                            <i class="fas fa-globe"></i>
-                            <h3>Web & App Development</h3>
-                            <p>From responsive websites to custom web applications and mobile apps, we deliver modern digital solutions for your business needs.</p>
-                        </div>
-                        <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-                            <i class="fas fa-paint-brush"></i>
-                            <h3>Graphic & UI/UX Design</h3>
-                            <p>Professional design services including logos, brand identity, business cards, and UI/UX design for websites and applications.</p>
-                        </div>
-                        <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-                            <i class="fas fa-pen-fancy"></i>
-                            <h3>Content Writing & Translation</h3>
-                            <p>High-quality content creation and translation services to help you communicate effectively with your audience.</p>
-                        </div>
+            <div class="services-categories">
+                <!-- Web & App Development -->
+                <div class="service-category" data-aos="fade-up">
+                    <div class="category-header"><i class="fas fa-laptop-code"></i><h3>Web & App Development</h3></div>
+                    <div class="category-cards">
+                        <div class="service-card"><i class="fas fa-chart-bar"></i><h4>Web Application Development</h4><p>Custom dashboards, SaaS, and portals tailored to your business needs.</p></div>
+                        <div class="service-card"><i class="fas fa-rocket"></i><h4>Landing Page Design & Development</h4><p>High-converting, modern landing pages for campaigns and products.</p></div>
+                        <div class="service-card"><i class="fas fa-tools"></i><h4>Website Maintenance & Support</h4><p>Ongoing updates, fixes, and support to keep your site running smoothly.</p></div>
+                        <div class="service-card"><i class="fas fa-tachometer-alt"></i><h4>Performance Optimization</h4><p>Speed, SEO, and accessibility improvements for better results.</p></div>
                     </div>
-                    <div class="services-row">
-                        <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
-                            <i class="fas fa-chart-line"></i>
-                            <h3>Business Support Services</h3>
-                            <p>Efficient and reliable support to help manage your daily business tasks—so you can focus on growth.</p>
-                        </div>
-                        <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
-                            <i class="fas fa-video"></i>
-                            <h3>Media & Video Services</h3>
-                            <p>Professional video editing, intro/outro creation, and voice-over services to enhance your multimedia content.</p>
-                        </div>
-                        <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
-                            <i class="fas fa-database"></i>
-                            <h3>Data & Analytics</h3>
-                            <p>Data analysis, dashboard creation, and database setup services to help you make data-driven decisions.</p>
-                        </div>
+                </div>
+                <!-- Design Services -->
+                <div class="service-category" data-aos="fade-up">
+                    <div class="category-header"><i class="fas fa-paint-brush"></i><h3>Design Services</h3></div>
+                    <div class="category-cards">
+                        <div class="service-card"><i class="fas fa-object-group"></i><h4>UI/UX Design</h4><p>Modern, user-friendly interfaces and experiences.</p></div>
+                        <div class="service-card"><i class="fas fa-gem"></i><h4>Branding & Logo Design</h4><p>Distinctive branding and memorable logos for your business.</p></div>
+                        <div class="service-card"><i class="fas fa-images"></i><h4>Graphic Design</h4><p>Social media, print, and ad creatives that stand out.</p></div>
+                        <div class="service-card"><i class="fas fa-chalkboard"></i><h4>Presentation Design</h4><p>Professional slides for PowerPoint, Keynote, and Google Slides.</p></div>
+                        <div class="service-card"><i class="fas fa-sitemap"></i><h4>Infographic Design</h4><p>Clear, engaging infographics to visualize your data and ideas.</p></div>
+                    </div>
+                </div>
+                <!-- Content & Marketing -->
+                <div class="service-category" data-aos="fade-up">
+                    <div class="category-header"><i class="fas fa-bullhorn"></i><h3>Content & Marketing</h3></div>
+                    <div class="category-cards">
+                        <div class="service-card"><i class="fas fa-pen-nib"></i><h4>Content Writing & Copywriting</h4><p>Persuasive, SEO-friendly content for web and print.</p></div>
+                        <div class="service-card"><i class="fab fa-facebook-messenger"></i><h4>Social Media Management</h4><p>Grow your brand and engage your audience on social platforms.</p></div>
+                        <div class="service-card"><i class="fas fa-envelope-open-text"></i><h4>Email Marketing Design & Setup</h4><p>Effective email campaigns and beautiful templates.</p></div>
+                        <div class="service-card"><i class="fas fa-blog"></i><h4>Blog Setup & Management</h4><p>Launch and maintain a professional blog for your business.</p></div>
+                    </div>
+                </div>
+                <!-- Multimedia & Creative -->
+                <div class="service-category" data-aos="fade-up">
+                    <div class="category-header"><i class="fas fa-photo-video"></i><h3>Multimedia & Creative</h3></div>
+                    <div class="category-cards">
+                        <div class="service-card"><i class="fas fa-video"></i><h4>Video Editing</h4><p>Professional editing for promotional, social, or corporate videos.</p></div>
+                        <div class="service-card"><i class="fas fa-film"></i><h4>Animation & Motion Graphics</h4><p>Engaging animations and motion graphics for any purpose.</p></div>
+                        <div class="service-card"><i class="fas fa-camera-retro"></i><h4>Photography & Photo Editing</h4><p>High-quality photos and expert retouching.</p></div>
+                        <div class="service-card"><i class="fas fa-podcast"></i><h4>Podcast Editing</h4><p>Clean, professional audio editing for podcasts.</p></div>
+                    </div>
+                </div>
+                <!-- Consulting & Training -->
+                <div class="service-category" data-aos="fade-up">
+                    <div class="category-header"><i class="fas fa-user-tie"></i><h3>Consulting & Training</h3></div>
+                    <div class="category-cards">
+                        <div class="service-card"><i class="fas fa-lightbulb"></i><h4>Digital Strategy Consulting</h4><p>Expert advice to grow your digital presence and business.</p></div>
+                        <div class="service-card"><i class="fas fa-cogs"></i><h4>Tech Stack Consulting</h4><p>Guidance on choosing and implementing the right technologies.</p></div>
+                        <div class="service-card"><i class="fas fa-chalkboard-teacher"></i><h4>Workshops & Training</h4><p>Hands-on training in web basics, design tools, and more.</p></div>
+                    </div>
+                </div>
+                <!-- Specialized & Advanced -->
+                <div class="service-category" data-aos="fade-up">
+                    <div class="category-header"><i class="fas fa-user-shield"></i><h3>Specialized & Advanced</h3></div>
+                    <div class="category-cards">
+                        <div class="service-card"><i class="fas fa-plug"></i><h4>API Integration</h4><p>Connect your site or app to third-party services and APIs.</p></div>
+                        <div class="service-card"><i class="fas fa-puzzle-piece"></i><h4>Custom Plugin/Extension Development</h4><p>Tailored plugins and extensions for unique functionality.</p></div>
+                        <div class="service-card"><i class="fas fa-database"></i><h4>CRM Integration</h4><p>Seamless integration with popular CRM platforms.</p></div>
+                        <div class="service-card"><i class="fas fa-universal-access"></i><h4>Accessibility Audits & Remediation</h4><p>Ensure your digital products are accessible to all users.</p></div>
+                        <div class="service-card"><i class="fas fa-shield-alt"></i><h4>Security Audits</h4><p>Comprehensive security checks and recommendations.</p></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+        <hr class="section-divider" aria-hidden="true">
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+        <section id="portfolio" class="portfolio" aria-label="Our Work">
         <div class="container">
             <h2 data-aos="fade-up">Our Work</h2>
-            <div class="portfolio-filters" data-aos="fade-up">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="portfolio">Portfolio</button>
-                <button class="filter-btn" data-filter="blog">Blog</button>
+                <div class="portfolio-filters" data-aos="fade-up" role="tablist" aria-label="Portfolio Filters">
+                    <button class="filter-btn active" data-filter="all" aria-selected="true">All</button>
+                    <button class="filter-btn" data-filter="portfolio" aria-selected="false">Portfolio</button>
+                    <button class="filter-btn" data-filter="blog" aria-selected="false">Blog</button>
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="portfolio" data-aos="fade-up">
-                    <a href="https://aqeelbmh.netlify.app/" target="_blank" class="portfolio-link">
-                        <img src="images/portfolio 1.png" alt="Portfolio Website 1">
+                        <a href="https://aqeelbmh.netlify.app/" target="_blank" class="portfolio-link" rel="noopener" aria-label="View Portfolio Website 1">
+                            <img src="images/portfolio 1.png" alt="Screenshot of Portfolio Website 1">
                         <div class="portfolio-overlay">
                             <h3>Portfolio Website 1</h3>
                             <p>Web Development</p>
                             <div class="portfolio-actions">
                                 <span class="view-project">View Project</span>
-                                <i class="fas fa-external-link-alt"></i>
-                            </div>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </div>
                         </div>
                     </a>
                 </div>
                 <div class="portfolio-item" data-category="portfolio" data-aos="fade-up" data-aos-delay="100">
-                    <a href="https://aqeelbmh.github.io/Client_oumar/" target="_blank" class="portfolio-link">
-                        <img src="images/portfolio 2.png" alt="Portfolio Website 2">
+                        <a href="https://aqeelbmh.github.io/Client_oumar/" target="_blank" class="portfolio-link" rel="noopener" aria-label="View Portfolio Website 2">
+                            <img src="images/portfolio 2.png" alt="Screenshot of Portfolio Website 2">
                         <div class="portfolio-overlay">
                             <h3>Portfolio Website 2</h3>
                             <p>Web Development</p>
                             <div class="portfolio-actions">
                                 <span class="view-project">View Project</span>
-                                <i class="fas fa-external-link-alt"></i>
-                            </div>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </div>
                         </div>
                     </a>
                 </div>
                 <div class="portfolio-item" data-category="portfolio" data-aos="fade-up" data-aos-delay="200">
-                    <a href="https://aqeelbmh.github.io/Oumar_Portfolio_Update/" target="_blank" class="portfolio-link">
-                        <img src="images/portfolio 3.png" alt="Portfolio Website 3">
+                        <a href="https://aqeelbmh.github.io/Oumar_Portfolio_Update/" target="_blank" class="portfolio-link" rel="noopener" aria-label="View Portfolio Website 3">
+                            <img src="images/portfolio 3.png" alt="Screenshot of Portfolio Website 3">
                         <div class="portfolio-overlay">
                             <h3>Portfolio Website 3</h3>
                             <p>Web Development</p>
                             <div class="portfolio-actions">
                                 <span class="view-project">View Project</span>
-                                <i class="fas fa-external-link-alt"></i>
-                            </div>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </div>
                         </div>
                     </a>
                 </div>
                 <div class="portfolio-item" data-category="blog" data-aos="fade-up" data-aos-delay="300">
-                    <a href="https://hkmotorskandy.netlify.app/" target="_blank" class="portfolio-link">
-                        <img src="images/blog.png" alt="Blog Page 1">
+                        <a href="https://hkmotorskandy.netlify.app/" target="_blank" class="portfolio-link" rel="noopener" aria-label="View Blog Page 1">
+                            <img src="images/blog.png" alt="Screenshot of Blog Page 1">
                         <div class="portfolio-overlay">
                             <h3>Blog Page 1</h3>
                             <p>Content & Design</p>
                             <div class="portfolio-actions">
                                 <span class="view-project">View Project</span>
-                                <i class="fas fa-external-link-alt"></i>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </div>
                             </div>
+                        </a>
+                </div>
+                <div class="portfolio-item" data-category="portfolio" data-aos="fade-up">
+                        <a href="https://aqeelbmh.vercel.app/" target="_blank" class="portfolio-link" rel="noopener" aria-label="View Portfolio Website 2">
+                            <img src="images/portfolio 4.png" alt="Screenshot of Portfolio Website 2">
+                        <div class="portfolio-overlay">
+                            <h3>Portfolio Website 2</h3>
+                            <p>Web Development</p>
+                            <div class="portfolio-actions">
+                                <span class="view-project">View Project</span>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio-item" data-category="portfolio" data-aos="fade-up">
+                        <a href="https://hasan-rabiev.vercel.app/" target="_blank" class="portfolio-link" rel="noopener" aria-label="View Portfolio Website 3">
+                            <img src="images/portfolio 5.png" alt="Screenshot of Portfolio Website 3">
+                        <div class="portfolio-overlay">
+                            <h3>Portfolio Website 3</h3>
+                            <p>Web Development</p>
+                            <div class="portfolio-actions">
+                                <span class="view-project">View Project</span>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
     </section>
-
+        <hr class="section-divider" aria-hidden="true">
     <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
+        <section id="pricing" class="pricing-section" aria-label="Our Pricing">
         <div class="container pricing-container">
             <div class="section-header" data-aos="fade-up">
                 <h2>Our Pricing</h2>
                 <p>Transparent pricing for all your digital needs</p>
                 <div class="pricing-note">
-                    <i class="fas fa-info-circle"></i>
-                    <p>Prices are flexible based on project complexity and requirements. Contact us for a customized quote.</p>
+                        <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    <p>Prices are flexible based on project complexity and requirements. <strong>Not all services have listed prices—please contact us for further details and a custom quote.</strong></p>
+                    <a href="#get-in-touch" class="contact-note-btn">Contact Us</a>
                 </div>
             </div>
-            <div class="pricing-grid">
                 <!-- Creative & Visual Services -->
-                <div class="pricing-category" data-aos="fade-up">
-                    <div class="category-header">
-                        <i class="fas fa-palette"></i>
-                        <h3>Creative & Visual Services</h3>
-                    </div>
-                    <div class="pricing-cards">
-                        <div class="pricing-card" data-aos="zoom-in">
-                            <div class="card-header">
-                                <h4>Web Portfolio</h4>
-                                <div class="price-tag">
-                                    <span class="currency">$</span>
-                                    <span class="amount">80</span>
-                                    <span class="price-range">- $100</span>
-                                </div>
+                    <h3 class="pricing-category-title">Creative & Visual Services</h3>
+                    <hr class="pricing-category-divider">
+                    <div class="pricing-cards-row">
+                        <div class="pricing-card" data-aos="fade-up">
+                            <div class="pricing-card-header">
+                                <h3>Web Portfolio</h3>
                             </div>
-                            <p class="card-description">Simple personal site to showcase work</p>
-                            <ul class="features">
-                                <li><i class="fas fa-check"></i> Responsive Design</li>
-                                <li><i class="fas fa-check"></i> Custom Layout</li>
-                                <li><i class="fas fa-check"></i> Basic SEO</li>
-                            </ul>
-                            <a href="#contact" class="pricing-button">Get Started</a>
+                            <div class="pricing-card-body">
+                                <div class="pricing-card-plan">
+                                    <span class="plan-price">$80 - $100</span>
+                                </div>
+                                <ul class="features">
+                                    <li><i class="fas fa-check"></i> Responsive Design</li>
+                                    <li><i class="fas fa-check"></i> Custom Layout</li>
+                                    <li><i class="fas fa-check"></i> Basic SEO</li>
+                                </ul>
+                                <a href="#get-in-touch" class="pricing-button">Get Started</a>
+                            </div>
                         </div>
-
-                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="card-header">
-                                <h4>Graphic Designing</h4>
-                                <div class="price-tag">
-                                    <span class="currency">$</span>
-                                    <span class="amount">50</span>
-                                    <span class="price-range">- $80</span>
-                                </div>
+                        <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="pricing-card-header">
+                                <h3>Graphic Designing</h3>
                             </div>
-                            <p class="card-description">Logos, branding, posters, etc.</p>
-                            <ul class="features">
-                                <li><i class="fas fa-check"></i> Logo Design</li>
-                                <li><i class="fas fa-check"></i> Branding</li>
-                                <li><i class="fas fa-check"></i> Print Materials</li>
-                            </ul>
-                            <a href="#contact" class="pricing-button">Get Started</a>
+                            <div class="pricing-card-body">
+                                <div class="pricing-card-plan">
+                                    <span class="plan-price">$50 - $80</span>
+                                </div>
+                                <ul class="features">
+                                    <li><i class="fas fa-check"></i> Logo Design</li>
+                                    <li><i class="fas fa-check"></i> Branding</li>
+                                    <li><i class="fas fa-check"></i> Print Materials</li>
+                                </ul>
+                                <a href="#get-in-touch" class="pricing-button">Get Started</a>
+                            </div>
                         </div>
-
-                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="card-header">
-                                <h4>Presentation Design</h4>
-                                <div class="price-tag">
-                                    <span class="currency">$</span>
-                                    <span class="amount">60</span>
-                                    <span class="price-range">- $90</span>
-                                </div>
+                        <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="pricing-card-header">
+                                <h3>Presentation Design</h3>
                             </div>
-                            <p class="card-description">Beautiful slides with animation</p>
-                            <ul class="features">
-                                <li><i class="fas fa-check"></i> Custom Templates</li>
-                                <li><i class="fas fa-check"></i> Visual Storytelling</li>
-                                <li><i class="fas fa-check"></i> Slide Animation</li>
-                            </ul>
-                            <a href="#contact" class="pricing-button">Get Started</a>
+                            <div class="pricing-card-body">
+                                <div class="pricing-card-plan">
+                                    <span class="plan-price">$60 - $90</span>
+                                </div>
+                                <ul class="features">
+                                    <li><i class="fas fa-check"></i> Custom Templates</li>
+                                    <li><i class="fas fa-check"></i> Visual Storytelling</li>
+                                    <li><i class="fas fa-check"></i> Slide Animation</li>
+                                </ul>
+                                <a href="#get-in-touch" class="pricing-button">Get Started</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
                 <!-- Writing & Language Services -->
-                <div class="pricing-category" data-aos="fade-up" data-aos-delay="100">
-                    <div class="category-header">
-                        <i class="fas fa-pen-nib"></i>
-                        <h3>Writing & Language Services</h3>
-                    </div>
-                    <div class="pricing-cards">
-                        <div class="pricing-card" data-aos="zoom-in">
-                            <div class="card-header">
-                                <h4>Content Writing</h4>
-                                <div class="price-tag">
-                                    <span class="currency">$</span>
-                                    <span class="amount">15</span>
-                                    <span class="price-range">- $30 per piece</span>
-                                </div>
+                    <h3 class="pricing-category-title">Writing & Language Services</h3>
+                    <hr class="pricing-category-divider">
+                    <div class="pricing-cards-row">
+                        <div class="pricing-card" data-aos="fade-up">
+                            <div class="pricing-card-header">
+                                <h3>Content Writing</h3>
                             </div>
-                            <p class="card-description">Blog posts, website content, etc.</p>
-                            <ul class="features">
-                                <li><i class="fas fa-check"></i> SEO Optimized</li>
-                                <li><i class="fas fa-check"></i> Research Included</li>
-                                <li><i class="fas fa-check"></i> 2 Revisions</li>
-                            </ul>
-                            <a href="#contact" class="pricing-button">Get Started</a>
+                            <div class="pricing-card-body">
+                                <div class="pricing-card-plan">
+                                    <span class="plan-price">$15 - $30 per piece</span>
+                                </div>
+                                <ul class="features">
+                                    <li><i class="fas fa-check"></i> SEO Optimized</li>
+                                    <li><i class="fas fa-check"></i> Research Included</li>
+                                    <li><i class="fas fa-check"></i> 2 Revisions</li>
+                                </ul>
+                                <a href="#get-in-touch" class="pricing-button">Get Started</a>
+                            </div>
                         </div>
-
-                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="card-header">
-                                <h4>Copywriting</h4>
-                                <div class="price-tag">
-                                    <span class="currency">$</span>
-                                    <span class="amount">20</span>
-                                    <span class="price-range">- $40 per page</span>
-                                </div>
+                        <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="pricing-card-header">
+                                <h3>Copywriting</h3>
                             </div>
-                            <p class="card-description">Ads, product descriptions, CTAs</p>
-                            <ul class="features">
-                                <li><i class="fas fa-check"></i> Sales Focused</li>
-                                <li><i class="fas fa-check"></i> Brand Voice</li>
-                                <li><i class="fas fa-check"></i> Multiple Formats</li>
-                            </ul>
-                            <a href="#contact" class="pricing-button">Get Started</a>
+                            <div class="pricing-card-body">
+                                <div class="pricing-card-plan">
+                                    <span class="plan-price">$20 - $40 per page</span>
+                                </div>
+                                <ul class="features">
+                                    <li><i class="fas fa-check"></i> Sales Focused</li>
+                                    <li><i class="fas fa-check"></i> Brand Voice</li>
+                                    <li><i class="fas fa-check"></i> Multiple Formats</li>
+                                </ul>
+                                <a href="#get-in-touch" class="pricing-button">Get Started</a>
+                            </div>
                         </div>
-
-                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="card-header">
-                                <h4>Translation & Writing</h4>
-                                <div class="price-tag">
-                                    <span class="currency">$</span>
-                                    <span class="amount">15</span>
-                                    <span class="price-range">- $25 per 500 words</span>
-                                </div>
+                        <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="pricing-card-header">
+                                <h3>Translation & Writing</h3>
                             </div>
-                            <p class="card-description">Basic translation and proofreading</p>
-                            <ul class="features">
-                                <li><i class="fas fa-check"></i> Multiple Languages</li>
-                                <li><i class="fas fa-check"></i> Proofreading</li>
-                                <li><i class="fas fa-check"></i> Localization</li>
-                            </ul>
-                            <a href="#contact" class="pricing-button">Get Started</a>
+                            <div class="pricing-card-body">
+                                <div class="pricing-card-plan">
+                                    <span class="plan-price">$15 - $25 per 500 words</span>
+                                </div>
+                                <ul class="features">
+                                    <li><i class="fas fa-check"></i> Multiple Languages</li>
+                                    <li><i class="fas fa-check"></i> Proofreading</li>
+                                    <li><i class="fas fa-check"></i> Localization</li>
+                                </ul>
+                                <a href="#get-in-touch" class="pricing-button">Get Started</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
                 <!-- Data & Analytics Services -->
-                <div class="pricing-category" data-aos="fade-up" data-aos-delay="200">
-                    <div class="category-header">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>Data & Analytics Services</h3>
-                    </div>
-                    <div class="pricing-cards">
-                        <div class="pricing-card" data-aos="zoom-in">
-                            <div class="card-header">
-                                <h4>Data Services</h4>
-                                <div class="price-tag">
-                                    <span class="currency">$</span>
-                                    <span class="amount">30</span>
-                                    <span class="price-range">- $50 per project</span>
-                                </div>
+                    <h3 class="pricing-category-title">Data & Analytics Services</h3>
+                    <hr class="pricing-category-divider">
+                    <div class="pricing-cards-row">
+                        <div class="pricing-card" data-aos="fade-up">
+                            <div class="pricing-card-header">
+                                <h3>Data Services</h3>
                             </div>
-                            <p class="card-description">Collection, cleaning, management</p>
-                            <ul class="features">
-                                <li><i class="fas fa-check"></i> Data Collection</li>
-                                <li><i class="fas fa-check"></i> Data Cleaning</li>
-                                <li><i class="fas fa-check"></i> Data Management</li>
-                            </ul>
-                            <a href="#contact" class="pricing-button">Get Started</a>
+                            <div class="pricing-card-body">
+                                <div class="pricing-card-plan">
+                                    <span class="plan-price">$30 - $50 per project</span>
+                                </div>
+                                <ul class="features">
+                                    <li><i class="fas fa-check"></i> Data Collection</li>
+                                    <li><i class="fas fa-check"></i> Data Cleaning</li>
+                                    <li><i class="fas fa-check"></i> Data Management</li>
+                                </ul>
+                                <a href="#get-in-touch" class="pricing-button">Get Started</a>
+                            </div>
                         </div>
-
-                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="card-header">
-                                <h4>Data Analysis</h4>
-                                <div class="price-tag">
-                                    <span class="currency">$</span>
-                                    <span class="amount">40</span>
-                                    <span class="price-range">- $60 per project</span>
-                                </div>
+                        <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="pricing-card-header">
+                                <h3>Data Analysis</h3>
                             </div>
-                            <p class="card-description">Charts, trends, insights</p>
-                            <ul class="features">
-                                <li><i class="fas fa-check"></i> Statistical Analysis</li>
-                                <li><i class="fas fa-check"></i> Reporting</li>
-                                <li><i class="fas fa-check"></i> Visualization</li>
-                            </ul>
-                            <a href="#contact" class="pricing-button">Get Started</a>
+                            <div class="pricing-card-body">
+                                <div class="pricing-card-plan">
+                                    <span class="plan-price">$40 - $60 per project</span>
+                                </div>
+                                <ul class="features">
+                                    <li><i class="fas fa-check"></i> Statistical Analysis</li>
+                                    <li><i class="fas fa-check"></i> Reporting</li>
+                                    <li><i class="fas fa-check"></i> Visualization</li>
+                                </ul>
+                                <a href="#get-in-touch" class="pricing-button">Get Started</a>
+                            </div>
                         </div>
-
-                        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="card-header">
-                                <h4>Data Entry</h4>
-                                <div class="price-tag">
-                                    <span class="currency">$</span>
-                                    <span class="amount">15</span>
-                                    <span class="price-range">- $25 per hour</span>
-                                </div>
+                        <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="pricing-card-header">
+                                <h3>Data Entry</h3>
                             </div>
-                            <p class="card-description">Typing, document filling</p>
-                            <ul class="features">
-                                <li><i class="fas fa-check"></i> Fast Typing</li>
-                                <li><i class="fas fa-check"></i> Data Validation</li>
-                                <li><i class="fas fa-check"></i> Confidentiality</li>
-                            </ul>
-                            <a href="#contact" class="pricing-button">Get Started</a>
+                            <div class="pricing-card-body">
+                                <div class="pricing-card-plan">
+                                    <span class="plan-price">$15 - $25 per hour</span>
+                                </div>
+                                <ul class="features">
+                                    <li><i class="fas fa-check"></i> Fast Typing</li>
+                                    <li><i class="fas fa-check"></i> Data Validation</li>
+                                    <li><i class="fas fa-check"></i> Confidentiality</li>
+                                </ul>
+                                <a href="#get-in-touch" class="pricing-button">Get Started</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
                 <!-- Business Support Services -->
-                <div class="pricing-category" data-aos="fade-up" data-aos-delay="300">
-                    <div class="category-header">
-                        <i class="fas fa-user-tie"></i>
-                        <h3>Business Support Services</h3>
-                    </div>
-                    <div class="pricing-cards">
-                        <div class="pricing-card" data-aos="zoom-in">
-                            <div class="card-header">
-                                <h4>Virtual Assistance</h4>
-                                <div class="price-tag">
-                                    <span class="currency">$</span>
-                                    <span class="amount">25</span>
-                                    <span class="price-range">- $40 per week</span>
-                                </div>
+                    <h3 class="pricing-category-title">Business Support Services</h3>
+                    <hr class="pricing-category-divider">
+                    <div class="pricing-cards-row">
+                        <div class="pricing-card" data-aos="fade-up">
+                            <div class="pricing-card-header">
+                                <h3>Virtual Assistance</h3>
                             </div>
-                            <p class="card-description">Emails, admin tasks, scheduling</p>
-                            <ul class="features">
-                                <li><i class="fas fa-check"></i> Email Management</li>
-                                <li><i class="fas fa-check"></i> Scheduling</li>
-                                <li><i class="fas fa-check"></i> Administrative Support</li>
-                            </ul>
-                            <a href="#contact" class="pricing-button">Get Started</a>
+                            <div class="pricing-card-body">
+                                <div class="pricing-card-plan">
+                                    <span class="plan-price">$25 - $40 per week</span>
+                                </div>
+                                <ul class="features">
+                                    <li><i class="fas fa-check"></i> Email Management</li>
+                                    <li><i class="fas fa-check"></i> Scheduling</li>
+                                    <li><i class="fas fa-check"></i> Administrative Support</li>
+                                </ul>
+                                <a href="#get-in-touch" class="pricing-button">Get Started</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+        <hr class="section-divider" aria-hidden="true">
     <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+        <section id="testimonials" class="testimonials" aria-label="Client Testimonials">
         <div class="container">
             <h2 data-aos="fade-up">Client Testimonials</h2>
-            <div class="testimonials-slider" data-aos="fade-up">
+                <div class="testimonials-slider" data-aos="fade-up" role="region" aria-label="Testimonials">
                 <div class="testimonial-card">
                     <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
                     <p>"Amazing work! The website exceeded our expectations and helped us grow our business significantly."</p>
                     <div class="client-info">
@@ -474,11 +491,11 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
                     <p>"Professional, responsive, and delivered exactly what we needed. Highly recommended!"</p>
                     <div class="client-info">
@@ -488,11 +505,11 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
                     <p>"Excellent service! The team was very professional and delivered a fantastic website that exceeded our expectations."</p>
                     <div class="client-info">
@@ -503,51 +520,111 @@
             </div>
         </div>
     </section>
-
+        <hr class="section-divider" aria-hidden="true">
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 data-aos="fade-up">Get in Touch</h2>
-            <div class="contact-content">
-                <form class="contact-form" action="https://formspree.io/f/mnnpydbl" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
+        <section id="contact-vanta" class="contact-section" aria-label="Contact Us">
+            <div class="container contact-section-container">
+                <div class="contact-form-col">
+                    <h2 class="contact-form-heading" id="get-in-touch"><i class="fas fa-paper-plane"></i> Get in Touch</h2>
+                    <div class="contact-note"><i class="fas fa-smile"></i> We reply within 24 hours!</div>
+                    <p class="contact-subtitle">Have a project in mind or just want to say hello? Fill out the form and we’ll get back to you as soon as possible.</p>
+                    <div class="contact-bg-blur"></div>
+                    <form class="contact-form" action="https://formspree.io/f/mnnpydbl" method="POST">
+                        <div class="contact-form-box">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <span class="form-step"><i class="fas fa-user"></i></span>
+                                    <input type="text" name="name" id="contact-name" required>
+                                    <label for="contact-name">Your Name</label>
+                                </div>
+                                <div class="form-group">
+                                    <span class="form-step"><i class="fas fa-envelope"></i></span>
+                                    <input type="email" name="email" id="contact-email" required>
+                                    <label for="contact-email">Your Email</label>
+                                </div>
+                                <div class="form-group">
+                                    <span class="form-step"><i class="fas fa-tag"></i></span>
+                                    <input type="text" name="subject" id="contact-subject" required>
+                                    <label for="contact-subject">Subject</label>
+                                </div>
+                                <div class="form-group">
+                                    <span class="form-step"><i class="fas fa-list"></i></span>
+                                    <select name="service" id="contact-service" required>
+                                        <option value="" disabled selected>Choose a service</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="UI/UX Design">UI/UX Design</option>
+                                        <option value="Content Writing">Content Writing</option>
+                                        <option value="Business Support">Business Support</option>
+                                        <option value="Media & Video">Media & Video</option>
+                                        <option value="Data & Analytics">Data & Analytics</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <label for="contact-service">Choose a service</label>
+                                </div>
+                                <div class="form-group">
+                                    <span class="form-step"><i class="fas fa-comment-dots"></i></span>
+                                    <textarea name="message" id="contact-message" required></textarea>
+                                    <label for="contact-message">Your Message</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-button highlight-animate"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                    <div class="contact-how-it-works">
+                        <h4><i class="fas fa-info-circle"></i> How it works</h4>
+                        <ul>
+                            <li>Fill out the form with your details and message.</li>
+                            <li>We’ll review your inquiry and respond within 24 hours.</li>
+                            <li>Your information is kept confidential and secure.</li>
+                        </ul>
                     </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
-                <div class="contact-info" data-aos="fade-left">
-                    <div class="info-item">
+                </div>
+                <div class="contact-info-col">
+                    <div class="contact-divider" aria-hidden="true"></div>
+                    <div class="contact-cards-vertical">
+                        <div class="contact-info-card" data-aos="fade-up">
                         <i class="fas fa-envelope"></i>
-                        <p>bmhaqeel995@gmail.com</p>
+                            <div class="info-text">
+                                <div class="info-title">EMAIL</div>
+                                <div class="info-detail">bmhaqeel995@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-card" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fas fa-phone"></i>
+                            <div class="info-text">
+                                <div class="info-title">PHONE</div>
+                                <div class="info-detail">+62 82113699451</div>
+                            </div>
+                        </div>
+                        <div class="contact-info-card" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info-text">
+                                <div class="info-title">LOCATION</div>
+                                <div class="info-detail">Jakarta, Indonesia</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+62 82113699451</p>
+                    <div class="contact-socials-centered">
+                        <div class="contact-socials">
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Jakarta, Indonesia</p>
+                    <div class="contact-cta-card">
+                        <div class="cta-title">Find us at our Studio HQ</div>
+                        <a href="#" class="cta-button">Get Directions</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
+        </section>
+    </main>
+    <footer class="footer" aria-label="Footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="images/my logo.png" alt="H.K Freelance Studio Logo" class="footer-logo">
+                    <img src="images/logo.png" alt="H.K Freelance Studio Logo" class="footer-logo">
                     <h3>H.K Freelance Studio</h3>
                     <p>Creating beautiful and functional digital solutions for your business needs.</p>
                 </div>
@@ -567,26 +644,26 @@
                         <h4>Services</h4>
                         <ul>
                             <li><a href="#services">Web & App Development</a></li>
-                            <li><a href="#services">Graphic & UI/UX Design</a></li>
-                            <li><a href="#services">Content Writing & Translation</a></li>
-                            <li><a href="#services">Digital Marketing & SEO</a></li>
-                            <li><a href="#services">Media & Video Services</a></li>
-                            <li><a href="#services">Data & Analytics</a></li>
+                            <li><a href="#services">Design Services</a></li>
+                            <li><a href="#services">Content & Marketing</a></li>
+                            <li><a href="#services">Multimedia & Creative</a></li>
+                            <li><a href="#services">Consulting & Training</a></li>
+                            <li><a href="#services">Specialized & Advanced</a></li>
                         </ul>
                     </div>
                     <div class="footer-column">
                         <h4>Contact Us</h4>
                         <ul class="contact-info">
-                            <li><i class="fas fa-envelope"></i> bmhaqeel995@gmail.com</li>
-                            <li><i class="fas fa-phone"></i> +62 82113699451</li>
-                            <li><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</li>
+                            <li><i class="fas fa-envelope" aria-hidden="true"></i> bmhaqeel995@gmail.com</li>
+                            <li><i class="fas fa-phone" aria-hidden="true"></i> +62 82113699451</li>
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Jakarta, Indonesia</li>
                         </ul>
                         <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://wa.me/qr/KQKYHWOTOOYYN1" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="https://wa.me/qr/KQKYHWOTOOYYN1" class="social-link"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -594,11 +671,35 @@
             <div class="footer-bottom">
                 <p class="copyright">&copy; 2025 H.K Freelance Studio. All rights reserved.</p>
                 <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="Privacy Policy_h.k.pdf" target="_blank" rel="noopener">Privacy Policy</a>
+                    <a href="Terms of Service_hk.pdf" target="_blank" rel="noopener">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top" style="display:none;position:fixed;bottom:32px;right:32px;z-index:999;background:linear-gradient(90deg,#4a90e2,#2c3e50);color:#fff;border:none;border-radius:50%;width:48px;height:48px;box-shadow:0 2px 8px rgba(31,38,135,0.10);font-size:1.5rem;cursor:pointer;transition:background 0.2s,box-shadow 0.2s;"><i class="fas fa-arrow-up"></i></button>
+    <!-- Vanta Birds Animated Overlay for Hero Section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.VANTA && window.VANTA.BIRDS) {
+    VANTA.BIRDS({
+      el: "#hero-vanta",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00
+    });
+  } else {
+    // fallback or retry logic if needed
+  }
+});
+</script>
 </body>
 </html> 
